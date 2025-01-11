@@ -13,3 +13,17 @@ const WeatherCard = ({ weatherData }) => {
 };
 
 export default WeatherCard;
+const WeatherForecast = ({ forecastData }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+      {forecastData.list.map((day, index) => (
+        <div key={index} className="bg-white p-4 rounded-lg shadow-md">
+          <p className="font-bold">{new Date(day.dt * 1000).toLocaleDateString()}</p>
+          <p>High: {day.temp.max}°C</p>
+          <p>Low: {day.temp.min}°C</p>
+          <p>{day.weather[0].description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
