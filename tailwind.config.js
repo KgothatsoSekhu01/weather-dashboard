@@ -9,3 +9,15 @@ module.exports = {
   },
   plugins: [],
 }
+module.exports = {
+  darkMode: 'class', // Enables dark mode
+  theme: {
+    extend: {
+      colors: {
+        darkBackground: '#121212',
+        darkText: '#ffffff',
+      },
+    },
+  },
+  plugins: [],
+};
